@@ -1,0 +1,50 @@
+/*content styling */
+#content {
+    max-width: 690px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    padding: 18px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/* footer on all pages */
+.footer {
+    margin: auto;
+}
+
+/* footer text on all pages */
+.footer-text {
+    font-size: small;
+}
+
+/* container for home card */
+.home-card {
+    max-width: 700px;
+    margin-top: 15px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+/* about container */
+.about-header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-text {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-img {
+    margin-left: 30px;
+}
+
+.header-section {
+    margin-top: 25px;
+}
+
+
