@@ -1,19 +1,27 @@
+/*navbar*/
+.navbar {
+    text-align: center;
+}
+
 /*content styling */
-#content {
+.content {
     max-width: 690px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 17px;
     padding: 18px;
-    margin-top: 20px;
     margin-bottom: 50px;
 }
 
-/* footer on all pages */
+.content-header {
+    margin-top: 30px;
+    padding: 18px;
+}
+
+/* footer styling*/
 .footer {
     margin: auto;
 }
 
-/* footer text on all pages */
 .footer-text {
     font-size: small;
 }
@@ -49,9 +57,3 @@
     margin-right: auto;
     width: 86%;
 }
-
-.header-section {
-    margin-top: 25px;
-}
-
-
