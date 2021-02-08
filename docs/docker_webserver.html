@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
 
@@ -17,7 +18,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-md">
         <a class="navbar-brand" href="index.html"><b>Docker and Linux</b></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -29,7 +31,8 @@
                     <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         Containerization
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -39,7 +42,8 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         Tutorials
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -59,11 +63,76 @@
     </div>
 
     <p class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis nisi vitae enim sagittis hendrerit. In ac
-        augue risus. Pellentesque tincidunt, ante ac semper fringilla, justo nunc ornare purus, ut molestie risus libero
-        at sapien. Curabitur commodo aliquet nisi, quis pellentesque quam. Aenean bibendum eleifend mauris, a laoreet
-        neque vestibulum ac. Curabitur vel aliquet metus. Phasellus rhoncus venenatis magna, eu ultrices massa porta
-        sed. Suspendisse tempus metus vel vulputate rutrum.
+        First, download Docker desktop. Then create a Docker Hub account. After installing Docker desktop and logging into your
+        Docker Hub account, open a CLI shell (such as PowerShell for PC or Terminal for Mac) and run “<i>docker run
+        hello-world</i>” to test your installation.
+    </p>
+
+    <div class="container dws-tutorial">
+        <img src="img/dws_tutorial_01.jpeg" alt="screenshot of terminal">
+    </div>
+
+    <p class="content">
+        Docker Hub allows you to pull pre-built images onto your local computer. To pull an Ubuntu image from Docker
+        Hub, run “<i>docker pull ubuntu</i>” in your CLI shell.
+    </p>
+
+    <div class="container dws-tutorial">
+        <img src="img/dws_tutorial_02.jpeg" alt="screenshot of terminal">
+    </div>
+
+    <p class="content">
+        After you pull the Ubuntu image from docker, you should see it listed in your Docker images. Run “<i>docker
+        images</i>” to see images on your local computer.
+    </p>
+
+    <div class="container dws-tutorial">
+        <img src="img/dws_tutorial_03.png" alt="screenshot of terminal">
+    </div>
+
+    <p class="content">
+        Next, run the Ubuntu image to create and log in to a Docker container by using the command “<i>docker run -it
+        ubuntu:latest /bin/bash</i>”. This brings you to an interactive shell.
+    </p>
+
+    <div class="container dws-tutorial">
+        <img src="img/dws_tutorial_04.png" alt="screenshot of terminal">
+    </div>
+
+    <p class="content">
+        The characters following ‘root@’ in the shell represent the container ID. Next, update the system using the
+        command “<i>apt-get update</i>”. When the updates have finished installing, it’s time to install Apache, a Web
+        server, in your container. To do this, run “<i>apt-get install apache2</i>”. After Apache has finished
+        installing, run “<i>apt-get install vim</i>” to install Vim, a text editor where you can use HTML to create
+        websites. Once Vim has finished installing, exit the interactive container shell by using the command
+        “<i>exit</i>”. Now it’s time to commit the container and create a new docker image. Run “<i>docker ps -a</i>” to
+        check the container.
+    </p>
+
+    <div class="container dws-tutorial">
+        <img src="img/dws_tutorial_05.png" alt="screenshot of terminal">
+    </div>
+
+    <p class="content">
+        Now, create a new Docker image of Ubuntu with Apache by running ““<i>docker commit [CONTAINER ID] [NAME OF NEW
+        IMAGE]</i>”.
+    </p>
+
+    <div class="container dws-tutorial">
+        <img src="img/dws_tutorial_06.png" alt="screenshot of terminal">
+    </div>
+
+    <p class="content">
+        In the example above, ‘c123ac8864d5’ is the container ID and ‘ubuntu-my_apache2’ is the name of the new image.
+        Run “<i>docker images</i>” to make sure your image has been saved.
+    </p>
+
+    <div class="container dws-tutorial">
+        <img src="img/dws_tutorial_07.png" alt="screenshot of terminal">
+    </div>
+
+    <p class="content" style="margin-bottom: 100px;">
+        You now have a container running Ubuntu and Apache on your local computer.
     </p>
 </div>
 
@@ -78,7 +147,9 @@
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
 
 <!-- Option 2: Separate Popper and Bootstrap JS -->
 <!--
