@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
 
@@ -17,7 +18,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-md">
         <a class="navbar-brand" href="index.html"><b>Docker and Linux</b></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -29,7 +31,8 @@
                     <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         Containerization
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -39,7 +42,8 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         Tutorials
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -53,7 +57,67 @@
     </div>
 </nav>
 
+<div class="container content">
+    <div class="content-header">
+        <h1>Connect Docker to a PyCharm Project</h1>
+    </div>
 
+    <p class="content">
+        First, create a Python repository in GitHub. Make sure to add a README and .gitignore file. Next, copy the repo
+        URL because you will need it to clone the repository through your CLI shell.
+    </p>
+
+    <div class="container dws-tutorial-img">
+        <img src="img/dpc-tutorial-01.png" alt="screenshot">
+    </div>
+
+    <p class="content">
+        In the shell, go to the directory where you would like to save your project. Enter the command “<i>git clone
+        [REPOSITORY URL]</i>” using your Python repository URL. To go to the newly made directory, enter the command
+        “<i>cd [DIRECTORY NAME]/</i>”. The directory name should be the same as the name of your repository. Use the
+        command “<i>git status </i>” to see if your project is up to date.
+    </p>
+
+    <div class="container dws-tutorial-img">
+        <img src="img/dpc-tutorial-02.png" alt="screenshot">
+    </div>
+
+    <p class="content">
+        Next, use vi text editor to create a Dockerfile with the command “<i>vi Dockerfile</i>”. Use vi command
+        “<i>i</i>” to insert new text. Copy the following code into the text file:
+    </p>
+
+    <div class="container dws-tutorial-img">
+        <img src="img/dpc-tutorial-03.png" alt="screenshot">
+    </div>
+
+    <p class="content">
+        Use ESC to exit insert mode and enter command “<i>:wq</i>” to write and quit the text file. Add the new
+        Dockerfile to git with the command “<i>git add Dockerfile</i>” Make sure to commit the Dockerfile by using “<i>git
+        commit -m ‘Added my docker files’</i>”. Check to see that your commit was successful by using “<i>git status</i>”.
+        Open ‘my_script.py’ in vi using command “<i>vi my_script.pi</i>”. Insert the following code into the text file:
+    </p>
+
+    <div class="container dws-tutorial-img">
+        <img src="img/dpc-tutorial-04.png" alt="screenshot">
+    </div>
+
+    <p class="content">
+        Write and quit the vi editor after inserting the code. Add and then commit the Python script to git. Now you can
+        build an image from this Dockerfile with the command “<i>docker build -t python-barcode .</i>” and run the image
+        using “<i>docker run python-barcode</i>”. This is what the barcode should look like:
+    </p>
+
+    <div class="container dws-tutorial-img">
+        <img src="img/dpc-tutorial-05.png" alt="screenshot">
+    </div>
+
+    <p class="content" style="margin-bottom: 100px;">
+        Push your changes to origin with the command “<i>git push origin main</i>”. Make sure your changes have been
+        pushed to origin in your GitHub repository.
+    </p>
+
+</div>
 
 <nav class="navbar fixed-bottom navbar-light bg-light">
     <div class="container-fluid footer-text">
@@ -66,7 +130,9 @@
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
 
 <!-- Option 2: Separate Popper and Bootstrap JS -->
 <!--
